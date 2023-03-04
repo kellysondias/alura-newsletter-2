@@ -6,12 +6,12 @@ export const ToggleTheme = () => {
 		"(prefers-color-scheme: dark)"
 	).matches;
 
-	const pageClasses = document.documentElement.classList
+	const pageClasses = document.documentElement.classList;
 
 	useEffect(() => {
 		systemPreference && pageClasses.add("dark");
 	}, []);
- 
+
 	const toggle = () => {
 		pageClasses.toggle("dark");
 	};
